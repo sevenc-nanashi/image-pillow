@@ -43,6 +43,7 @@ class Generator:
     def __init__(self, base: Image = None):
         if base:
             assert base.size == (2048, 1261), "Base image must be 2048x1261"
+            self.base = base
         else:
             self.base = base_normal
 

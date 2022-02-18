@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "pjsekai_background_gen_pillow"
-version = "0.1.1"
+version = "0.1.2"
 description = "Generates PJSekai backgrounds with Pillow"
 authors = ["sevenc-nanashi <sevenc-nanashi@sevenbot.jp>"]
 license = "GPLv3"
