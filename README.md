@@ -1,6 +1,13 @@
 # pjsekai_background_gen_pillow
+[![Python Versions](https://img.shields.io/pypi/v/pjsekai_background_gen_pillow.svg)](https://pypi.org/project/pjsekai_background_gen_pillow/)
 
 Generates PJSekai background image from Image.
+
+## Installation
+
+```
+pip install pjsekai_background_gen_pillow
+```
 
 ## Example
 
