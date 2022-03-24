@@ -45,3 +45,7 @@ source : PIL.Image
 ##### Returns
 
 PIL.Image
+
+## License
+
+This library is licensed under GPLv3. `test.png` is licensed under CC-BY-SA 4.0.

@@ -5,7 +5,7 @@ assets_dir = os.path.dirname(__file__) + "/assets"
 base_normal = Image.open(assets_dir + "/background-base.png")
 mask_img = Image.open(assets_dir + "/mask.png").convert("L")
 side_mask = Image.open(assets_dir + "/side-mask.png")
-dot_tile = Image.open(assets_dir + "/dot-tilea.png")
+frame = Image.open(assets_dir + "/frame.png")
 
 
 class Deformer:
@@ -113,11 +113,11 @@ class Generator:
         # base.paste(base2, (0, 0), mask=mask_img)
         buffer = Image.alpha_composite(base, base2)
         buffer.paste(base3, (0, 0), mask=side_mask)
-        buffer = Image.alpha_composite(buffer, dot_tile)
         res = Image.new("RGBA", mask_img.size)
         diff = (buffer.height - mask_img.height) // 2
         # print(buffer.crop((0, diff, base.width, base.height - diff)).size, mask_img.size)
         res.paste(base.crop((0, diff, base.width, base.height - diff - 1)), (0, 0))
         res.paste(buffer.crop((0, diff, base.width, base.height - diff - 1)), (0, 0), mask=mask_img)
+        res.paste(frame, (0, -diff), mask=frame)
         res = res.convert("RGB")
         return res
