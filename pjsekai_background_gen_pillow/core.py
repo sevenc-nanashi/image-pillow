@@ -1,6 +1,8 @@
 import os
 from PIL import Image, ImageOps
 
+__all__ = ['Generator']
+
 assets_dir = os.path.dirname(__file__) + "/assets"
 base_normal = Image.open(assets_dir + "/background-base.png")
 mask_img = Image.open(assets_dir + "/mask.png").convert("L")
@@ -35,30 +37,30 @@ class Generator:
 
     Parameters
     ----------
-    base : PIL.Image
+    base : Image.Image
         Base background image.
         Defaults to Built-in background image.
     """
 
-    def __init__(self, base: Image = None):
+    def __init__(self, base: Image.Image = None):
         if base:
             assert base.size == (2048, 1261), "Base image must be 2048x1261"
             self.base = base
         else:
             self.base = base_normal
 
-    def generate(self, source: Image) -> Image:
+    def generate(self, source: Image.Image) -> Image.Image:
         """
         Generate background image from source image.
 
         Parameters
         ----------
-        source : PIL.Image
+        source : PIL.Image.Image
             Source image.
 
         Returns
         -------
-        PIL.Image
+        PIL.Image.Image
         """
         jacket = source.convert("RGBA")
         base = self.base.copy().convert("RGBA")
