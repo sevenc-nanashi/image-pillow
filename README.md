@@ -19,6 +19,27 @@ generator = pjbg.Generator()
 generator.generate(Image.open("path/to/image.png")).save("path/to/output.png")
 ```
 
+## CLI
+
+You can run `pjsekai_background_gen_pillow`, `pjbg` or `python -m pjsekai_background_gen_pillow` from command line.
+
+```
+usage: pjsekai_background_gen_pillow [-h] [-b BACKGROUND] [-f FORMAT] base output
+
+Generates PJSekai background image from Image.
+
+positional arguments:
+  base                  Base image file path, or "-" for stdin.
+  output                Output image file path, or "-" for stdout.
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -b BACKGROUND, --background BACKGROUND
+                        Background image file path.
+  -f FORMAT, --format FORMAT
+                        Output image format.
+```
+
 ## API
 
 ### `Generator`

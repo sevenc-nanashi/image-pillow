@@ -1,12 +1,16 @@
 [tool.poetry]
 name = "pjsekai_background_gen_pillow"
-version = "0.2.1"
+version = "0.3.0"
 description = "Generates PJSekai backgrounds with Pillow"
 authors = ["sevenc-nanashi <sevenc-nanashi@sevenbot.jp>"]
 license = "GPLv3"
 homepage = "https://github.com/sevenc-nanashi/pjsekai_background_gen_pillow"
 repository = "https://github.com/sevenc-nanashi/pjsekai_background_gen_pillow"
 readme = "README.md"
+
+[tool.poetry.scripts]
+pjsekai_background_gen_pillow = "pjsekai_background_gen_pillow.__main__:main"
+pjbg = "pjsekai_background_gen_pillow.__main__:main"
 
 [tool.poetry.dependencies]
 python = "^3.9"
