@@ -1,6 +1,9 @@
 # pjsekai_background_gen_pillow
 [![Python Versions](https://img.shields.io/pypi/v/pjsekai_background_gen_pillow.svg)](https://pypi.org/project/pjsekai_background_gen_pillow/)
 
+> **Warning**
+> This repository is no longer maintained. Please use [pjsekai-background-gen-rust](https://github.com/sevenc-nanashi/pjsekai-background-gen-rust)
+
 Generates PJSekai background image from Image.
 
 ## Installation
